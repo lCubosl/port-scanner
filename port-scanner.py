@@ -48,7 +48,7 @@ while True:
 
     if m:
       port_min, port_max = map(int, m.groups())
-      # print(f"your port_min is {port_min} and port_max is {port_max}")
+      print(f"Searching for open ports in the range: {port_min} - {port_max}")
       break
     else:
       print("bad range format, try again")
@@ -77,7 +77,7 @@ while True:
 
   # we only care about open ports
   for port in open_ports:
-    print(f"Port {port} is open on {ip_add_entered}.")
+    print(f"-> Port {port} is open on {ip_add_entered}.")
 
   # ask to repeat else exit
   again = input("\nDo you want to search for open ports on another host? [Y/n]: ").strip().lower()
